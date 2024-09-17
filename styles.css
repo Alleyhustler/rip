@@ -1,0 +1,131 @@
+/* Set the body background image */
+body {
+    background-image: url('images/ree.png'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    font-family: 'Roboto Mono', monospace;  /* Monospace font for a serious tone */
+    color: #f5f5f5;  /* Light text for contrast */
+    overflow: hidden;
+}
+
+/* Container to centralize and position content */
+.container {
+    text-align: center;
+}
+
+/* Style the title */
+.title {
+    font-family: 'Bebas Neue', sans-serif;  /* Eye-catching font */
+    font-size: 6rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    animation: fadeIn 3s ease-in-out, pulse 3s infinite; /* Fade and pulse effect */
+    color: #ff4d4d; /* Red to symbolize danger/death */
+    margin-top: -200px; /* Moves the title upwards */
+}
+
+/* GIF container with responsive size */
+.gif-container {
+    width: 70%; /* Set width relative to screen size */
+    max-width: 1000px; /* Ensure it doesn't get too large */
+    margin-top: 40px;
+    margin-left: 140px; /* Keeps the alignment you prefer */
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main GIF styling */
+.crying-gif {
+    width: 100%;
+    height: auto; /* Keep aspect ratio */
+    object-fit: contain; /* Ensures the GIF doesn't stretch */
+}
+
+/* Small random GIFs */
+.random-gif {
+    position: absolute;
+    width: 200px; /* Small GIF size */
+    height: 200px; /* Small GIF size */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Define specific small GIFs */
+.gif1 {
+    background-image: url('images/chickdr.gif'); /* Path to your small random GIF */
+    top: -10%;
+    left: -10%;
+}
+
+.gif2 {
+    background-image: url('images/red.gif'); /* Path to your small random GIF */
+    top: -10%;
+    right: -10%;
+}
+
+.gif3 {
+    background-image: url('images/redd.gif'); /* Path to your small random GIF */
+    bottom: -10%;
+    left: -10%;
+}
+
+.gif4 {
+    background-image: url('images/redskull.gif'); /* Path to your small random GIF */
+    bottom: -10%;
+    right: -10%;
+}
+
+.gif5 {
+    background-image: url('images/chickdr.gif'); /* Path to your small random GIF */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Fade in effect for the title and text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for the title */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Social Media Icons */
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon {
+    width: 100px;
+    height: 100px;
+}
